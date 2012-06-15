@@ -1,3 +1,5 @@
+// @reference jquery-1.7.2.js
+// @reference underscore.js
 //     Backbone.js 0.9.2
 
 //     (c) 2010-2012 Jeremy Ashkenas, DocumentCloud Inc.

@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using Cassette.Configuration;
 using Cassette.Scripts;
 using Cassette.Stylesheets;
@@ -21,7 +22,10 @@ namespace BootstrapBackbone1
             //bundles.AddPerIndividualFile<ScriptBundle>("Scripts");
 
             bundles.Add<StylesheetBundle>("Content/assets/css");
+
             bundles.AddPerSubDirectory<ScriptBundle>("Content/assets/js");
+            bundles.Add<ScriptBundle>("Scripts", new FileSearch { Exclude = new Regex("_references.js|-vsdoc\\.js$")});
+
             // To combine files, try something like this instead:
             //   bundles.Add<StylesheetBundle>("Content");
             // In production mode, all of ~/Content will be combined into a single bundle.

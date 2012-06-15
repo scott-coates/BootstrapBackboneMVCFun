@@ -1,3 +1,5 @@
+// @reference ~/Scripts/backbone.js
+
 // Backbone.Marionette v0.9.0
 //
 // Copyright (C)2012 Derick Bailey, Muted Solutions, LLC
