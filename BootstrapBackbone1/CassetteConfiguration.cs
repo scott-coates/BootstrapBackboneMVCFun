@@ -1,5 +1,6 @@
 using System.Text.RegularExpressions;
 using Cassette.Configuration;
+using Cassette.HtmlTemplates;
 using Cassette.Scripts;
 using Cassette.Stylesheets;
 
@@ -21,10 +22,12 @@ namespace BootstrapBackbone1
             //bundles.AddPerIndividualFile<StylesheetBundle>("Content");
             //bundles.AddPerIndividualFile<ScriptBundle>("Scripts");
 
-            bundles.Add<StylesheetBundle>("Content/assets/css");
-
             bundles.Add<ScriptBundle>("Content/app");
+
+            bundles.Add<StylesheetBundle>("Content/assets/css");
+            bundles.Add<HtmlTemplateBundle>("Content/assets/templates", bundle => bundle.Processor = new HoganPipeline());
             bundles.AddPerSubDirectory<ScriptBundle>("Content/assets/js");
+            
             bundles.Add<ScriptBundle>("Scripts", new FileSearch { Exclude = new Regex("_references.js|-vsdoc\\.js$")});
 
             // To combine files, try something like this instead:

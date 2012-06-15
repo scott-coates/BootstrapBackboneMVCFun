@@ -179,12 +179,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\app\collections\feed\feedList.js" />
+    <Content Include="Content\app\config.js" />
     <Content Include="Content\app\main.js" />
     <Content Include="Content\app\models\feed\feedItem.js" />
+    <None Include="Content\assets\templates\feed\feedList.mustache" />
+    <None Include="Content\assets\templates\feed\feedItem.mustache" />
+    <Content Include="Content\app\views\feed\feedListView.js" />
+    <Content Include="Content\app\views\feed\feedItemView.js" />
     <Content Include="Content\assets\css\bootstrap-responsive.css" />
     <Content Include="Content\assets\css\bootstrap.css" />
     <Content Include="Content\assets\img\glyphicons-halflings-white.png" />
     <Content Include="Content\assets\img\glyphicons-halflings.png" />
+    <Content Include="Content\assets\js\hogan\hogan.js" />
     <Content Include="Content\assets\js\marionette\backbone.marionette.js" />
     <Content Include="Content\assets\js\modernizr\modernizr-2.5.3-respond-1.1.0.min.js" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -254,8 +260,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\app\templates\" />
-    <Folder Include="Content\app\views\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

@@ -1,8 +1,10 @@
 @{
     Bundles.Reference("Content/assets/css");
+    Bundles.Reference("Content/assets/templates");
     Bundles.Reference("Content/assets/js/modernizr", "head");
     Bundles.Reference("Scripts");
     Bundles.Reference("Content/assets/js/marionette");
+    Bundles.Reference("Content/assets/js/hogan");
     Bundles.Reference("Content/app");
 }
 <!doctype html>
@@ -40,7 +42,7 @@
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container" id="main-content">
         @RenderBody()
         <hr>
         <footer>
@@ -49,10 +51,13 @@
     </div>
     <!-- /container -->
     @Bundles.RenderScripts()
-    @{
-        Bundles.AddInlineScript(
-        @<text> $(function(){ CliqFlip.Mvc.App.start(); });
-        </text>);
-    }
+    @Bundles.RenderHtmlTemplates()
+    <script type="text/javascript" language="javascript">
+        $(function () {
+            var feedItem = new CliqFlip.Mvc.App.Models.FeedItem();
+            var feedList = new CliqFlip.Mvc.App.Collections.FeedList([feedItem]);
+            CliqFlip.Mvc.App.start({ feedList: feedList });
+        });
+    </script>
 </body>
 </html>
