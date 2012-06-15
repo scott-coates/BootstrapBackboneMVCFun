@@ -11,7 +11,3 @@ var CliqFlip = (function (cliqFlip) {
 
     return cliqFlip;
 } (CliqFlip || {}));
-
-$(function() {
-    CliqFlip.Mvc.App.start();
-});
