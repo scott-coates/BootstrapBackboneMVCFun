@@ -6,10 +6,12 @@ var CliqFlip = (function (cliqFlip) {
     cliqFlip.Mvc.App = new Backbone.Marionette.Application();
 
     cliqFlip.Mvc.App.addInitializer(function () {
-        console.log('init');
+        alert('init');
     });
-
-    cliqFlip.Mvc.App.start();
 
     return cliqFlip;
 } (CliqFlip || {}));
+
+$(function() {
+    CliqFlip.Mvc.App.start();
+});
