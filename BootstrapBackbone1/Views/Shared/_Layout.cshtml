@@ -42,7 +42,7 @@
             </div>
         </div>
     </div>
-    <div class="container" id="main-content">
+    <div class="container">
         @RenderBody()
         <hr>
         <footer>
@@ -54,9 +54,7 @@
     @Bundles.RenderHtmlTemplates()
     <script type="text/javascript" language="javascript">
         $(function () {
-            var feedItem = new CliqFlip.Mvc.App.Models.FeedItem();
-            var feedList = new CliqFlip.Mvc.App.Collections.FeedList([feedItem]);
-            CliqFlip.Mvc.App.start({ feedList: feedList });
+            CliqFlip.Mvc.App.start();
         });
     </script>
 </body>

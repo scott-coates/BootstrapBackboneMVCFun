@@ -10,15 +10,13 @@ var CliqFlip = (function (cliqFlip) {
     cliqFlip.Mvc.App.Collections = {};
 
     cliqFlip.Mvc.App.addRegions({
-        mainRegion: "#main-content"
+        topPart: ".hero-unit",
+        contentPart: ".row"
     });
 
-    cliqFlip.Mvc.App.addInitializer(function (options) {
-        var feedList = new cliqFlip.Mvc.App.Views.FeedListView({
-            collection: options.feedList
-        });
-
-        this.mainRegion.show(feedList);
+    cliqFlip.Mvc.App.addInitializer(function () {
+        this.topPart.show(new cliqFlip.Mvc.App.Views.TopPartView());
+        this.contentPart.show(new cliqFlip.Mvc.App.Views.ContentPartView());
     });
 
     return cliqFlip;
