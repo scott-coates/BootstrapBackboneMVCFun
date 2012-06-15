@@ -1,0 +1,17 @@
+﻿Require.js looks nice. I looked into the following:
+http://backbonetutorials.com/organizing-backbone-using-modules/
+https://github.com/thomasdavis/backbonetutorials/tree/gh-pages/examples/modular-backbone/js
+https://github.com/thomasdavis/backboneboilerplate/tree/gh-pages/js
+https://github.com/tbranyen/backbone-boilerplate/tree/master/assets
+
+and AMD looks great.
+
+However, I think we can get away with Cassette for now.
+
+Cassette includes:
+-bundling
+-modules (http://getcassette.net/documentation/AssetReferences)
+-JST (no need for require!text\myTemplate.html)
+
+Backbone boilerplaters looked okay too. Most were focused on AMD and some had scaffolding for application init.
+Some had global ideas setup too (global events). However, I think Backbone.Marionette looks promising so I'll start with that next.
