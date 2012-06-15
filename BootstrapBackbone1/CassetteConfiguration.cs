@@ -23,6 +23,7 @@ namespace BootstrapBackbone1
 
             bundles.Add<StylesheetBundle>("Content/assets/css");
 
+            bundles.AddPerSubDirectory<ScriptBundle>("Content/app");
             bundles.AddPerSubDirectory<ScriptBundle>("Content/assets/js");
             bundles.Add<ScriptBundle>("Scripts", new FileSearch { Exclude = new Regex("_references.js|-vsdoc\\.js$")});
 
