@@ -19,5 +19,15 @@ var CliqFlip = (function (cliqFlip) {
         this.contentPart.show(new cliqFlip.Mvc.App.Views.ContentPartView());
     });
 
+    cliqFlip.Mvc.App.addInitializer(function () {
+        var that = this;
+        this.vent.on("feed:showList", function () {
+            that.contentPart.show(new cliqFlip.Mvc.App.Views.FeedListView(
+                {
+                    collection: new cliqFlip.Mvc.App.Collections.FeedList([new cliqFlip.Mvc.App.Models.FeedItem()])
+                }));
+        });
+    });
+
     return cliqFlip;
 } (CliqFlip || {}));

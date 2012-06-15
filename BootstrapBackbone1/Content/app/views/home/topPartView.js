@@ -7,7 +7,7 @@ var CliqFlip = (function (cliqFlip) {
         },
 
         showFeed: function () {
-            alert('this is a feed');
+            cliqFlip.Mvc.App.vent.trigger("feed:showList");
         }
     });
 
