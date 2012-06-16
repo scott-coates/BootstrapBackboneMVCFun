@@ -11,7 +11,7 @@ var CliqFlip = (function (cliqFlip) {
 
     cliqFlip.Mvc.App.addRegions({
         topPart: ".hero-unit",
-        contentPart: ".row"
+        contentPart: "#contentPart"
     });
 
     cliqFlip.Mvc.App.addInitializer(function () {
