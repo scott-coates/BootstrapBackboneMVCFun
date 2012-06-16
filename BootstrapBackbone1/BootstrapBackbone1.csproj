@@ -180,6 +180,7 @@
   <ItemGroup>
     <Content Include="Content\app\collections\feed\feedList.js" />
     <Content Include="Content\app\config.js" />
+    <Content Include="Content\app\routers\appRouter.js" />
     <Content Include="Content\app\main.js" />
     <Content Include="Content\app\models\feed\feedItem.js" />
     <None Include="Content\assets\templates\feed\feedList.mustache" />
