@@ -5,7 +5,8 @@ var CliqFlip = (function (cliqFlip) {
 
     cliqFlip.Mvc.App.Collections.FeedList = Backbone.Collection.extend(
         {
-            model: cliqFlip.Mvc.App.Views.FeedItem
+            model: cliqFlip.Mvc.App.Models.FeedItem,
+            url: '/api/values'
         });
 
     return cliqFlip;

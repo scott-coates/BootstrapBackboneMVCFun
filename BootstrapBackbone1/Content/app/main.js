@@ -22,10 +22,14 @@ var CliqFlip = (function (cliqFlip) {
     cliqFlip.Mvc.App.addInitializer(function () {
         var that = this;
         this.vent.on("feed:showList", function () {
-            that.contentPart.show(new cliqFlip.Mvc.App.Views.FeedListView(
-                {
-                    collection: new cliqFlip.Mvc.App.Collections.FeedList([new cliqFlip.Mvc.App.Models.FeedItem()])
-                }));
+            var feedList = new cliqFlip.Mvc.App.Collections.FeedList();
+
+            feedList.fetch({
+                success: function () {
+                    that.contentPart.show(new cliqFlip.Mvc.App.Views.FeedListView({collection: feedList}));
+                }
+            });
+
         });
     });
 
