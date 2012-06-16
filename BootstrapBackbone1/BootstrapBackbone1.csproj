@@ -194,6 +194,7 @@
     <Content Include="Content\assets\img\glyphicons-halflings.png" />
     <Content Include="Content\assets\js\hogan\hogan.js" />
     <Content Include="Content\assets\js\marionette\backbone.marionette.js" />
+    <Content Include="Content\assets\js\masonary\jquery.masonry.js" />
     <Content Include="Content\assets\js\modernizr\modernizr-2.5.3-respond-1.1.0.min.js" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
