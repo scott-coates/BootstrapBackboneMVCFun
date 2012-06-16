@@ -6,14 +6,11 @@ var CliqFlip = (function(cliqFlip) {
         template: "feed-feedList",
         className: 'feed-list',
         itemView: cliqFlip.Mvc.App.Views.FeedItemView,
-        onRender: function() {
-            var that = this;
-            setTimeout(function() {
-                that.$el.masonry({
-                    itemSelector: "." + that.itemView.prototype.className,
-                    columnWidth: 100
-                });
-            }, 1000);
+        onShow: function() {
+            this.$el.masonry({
+                itemSelector: "." + this.itemView.prototype.className,
+                columnWidth: 100
+            });
         }
     });
 
