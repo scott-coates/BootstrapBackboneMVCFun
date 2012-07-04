@@ -1,6 +1,6 @@
 # BootstrapBackboneMVCFun
 
-Test project with fun web technologies
+Test project with fun web technologies.
 
 ## About BBMVCFun
 
